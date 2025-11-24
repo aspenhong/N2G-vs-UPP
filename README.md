@@ -1,12 +1,5 @@
-Based on the two CSV files provided (`n2d.csv` and `upp.csv`), I have generated a comparison report summarizing the differences between the two GRIB2 datasets.
+Based on the two CSV files provided (`n2d.csv` and `upp.csv`), I have written a comparison report summarizing the differences between the two GRIB2 datasets.
 
-### **Executive Summary**
-
-The **`n2d`** dataset appears to be a raw or specialized model output containing native model coordinates (**Sigma levels**) and derived dynamic variables like **Potential Temperature** and **Relative Vorticity**. It also includes specific proprietary or local parameters (Variable 235).
-
-The **`upp`** dataset (likely "Unified Post Processor" output) focuses on **Hybrid levels**, post-processed diagnostic fields (like **Absolute Vorticity**), and expanded surface/radiation fields (component fluxes rather than net fluxes).
-
----
 
 ### **Detailed Comparison**
 
@@ -47,12 +40,7 @@ The `upp` file contains more "weather station" style diagnostics, whereas `n2d` 
     *   **Cloud Cover:** **HCDC** (High Cloud Cover), **TCDC** (Total Cloud Cover).
     *   **Surface:** **SOTYP** (Soil Type), **WTMP** (Water Temp), **GFLUX** (Ground Flux).
 
-#### **4. Forecast Time / Accumulation**
-*   **`n2d`:** Accumulations and Max Wind are based on a **0-123 hour** forecast window.
-*   **`upp`:** Accumulations and Max Wind are based on a **0-100 hour** forecast window.
-*   *Note: This indicates these files are likely from different time steps of a model run.*
-
-#### **5. Technical Variable Coding**
+#### **4. Technical Variable Coding**
 *   **The "Unknown" Variable:** `n2d` contains `var discipline=0 center=138 local_table=1 parmcat=1 parm=235` at almost every level. Center 138 usually refers to the **Taiwan Central Weather Administration (CWA)**. This variable is completely absent in `upp`.
 *   **Precipitation:** `n2d` uses `APCP` and `NCPCP`. `upp` uses `APCP`, `NCPCP`, and `ACPCP`.
 
