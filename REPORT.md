@@ -10,7 +10,7 @@ Based on the two CSV files provided (`n2d.csv` and `upp.csv`), I have written a 
     *   **`upp` unique:** No unique isobaric levels observed.
 *   **Native/Model Levels:**
     *   **`n2d` unique:** Contains data on **"0 sigma level"** (DPT, UGRD, VGRD, RH, CLMR, RWMR).
-    *   **`upp` unique:** Contains data on **"1 hybrid level"** (PRMSL, CLMR, RWMR, TMP, RH, DPT, UGRD, VGRD).
+    *   **`upp` unique:** Contains data on **"1 hybrid level"** (CLMR, RWMR, TMP, RH, DPT, UGRD, VGRD).
 
 #### **2. Isobaric Atmospheric Variables**
 While both files share standard variables (HGT, TMP, DPT, UGRD, VGRD, VVEL, DZDT, SPFH, RH), there are distinct differences in thermodynamic and dynamic variables:
